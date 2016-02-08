@@ -6,6 +6,9 @@ use JsonSerializable;
 
 abstract class Word implements WordInterface, TranslatableInterface, JsonSerializable
 {
+	
+	const SHORT_SUFFIX = 'ay';
+	const LONG_SUFFIX = 'way'; 
 
 	/** @var string */
 	protected $string;
@@ -65,7 +68,7 @@ class Consonant extends Word
 
 	public function translate()
 	{
-		return $this->suffix . $this->prefix . 'ay';
+		return $this->suffix . $this->prefix . self::SHORT_SUFFIX;
 	}
 
 }
@@ -77,7 +80,7 @@ class ConsonantCluster extends Word
 
 	public function translate()
 	{
-		return $this->suffix . $this->prefix . 'ay';
+		return $this->suffix . $this->prefix . self::SHORT_SUFFIX;
 	}
 
 }
@@ -89,7 +92,7 @@ class Other extends Word
 
 	public function translate()
 	{
-		return $this->suffix . $this->prefix . 'ay';
+		return $this->suffix . $this->prefix . self::SHORT_SUFFIX;
 	}
 
 }
@@ -101,7 +104,7 @@ class Vowel extends Word
 
 	public function translate()
 	{
-		return $this->string . 'way';
+		return $this->string . self::LONG_SUFFIX;
 	}
 
 }
