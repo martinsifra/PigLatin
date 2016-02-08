@@ -1,47 +1,48 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+#################
+## Log
+#################
+/log/*
+!/log/.htaccess
+!/log/web.config
 
-# Folder config file
-Desktop.ini
+#################
+## Temp
+#################
+/temp/*
+/www/webtemp/*
+!/temp/.htaccess
+!/temp/web.config
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+#################
+## Nette configs
+#################
+*.local.neon
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+#################
+## Composer
+#################
+composer.lock
 
-# Windows shortcuts
-*.lnk
+#################
+## Vendor (3rd side libs)
+################
+/vendor/*
+!/vendor/others
 
-# =========================
-# Operating System Files
-# =========================
+#################
+## NetBeans
+################
+/nbproject/*
 
-# OSX
-# =========================
+#################
+## FTP Deployment
+################
+/deployment/*
 
-.DS_Store
-.AppleDouble
-.LSOverride
+#################
+## PhpStorm
+################
+.idea
 
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+/tmp/*
+/purge/*
